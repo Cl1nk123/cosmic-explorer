@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header reveal-left">
+    <p style="color:#ffa94d; font-size:0.85rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Пятая планета от Солнца</p>
+    <h1 style="background:linear-gradient(90deg,#ffd43b,#ff9800); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">🟠 Юпитер — Гигант Солнечной системы</h1>
+</div>
+
+<div class="row g-4">
+    <div class="col-lg-8">
+
+        <div class="cosmic-card p-4 mb-4 reveal-left">
+            <p class="lead" style="color:#c0d0e8;">Юпитер — пятая планета от Солнца и крупнейшая в Солнечной системе. Масса Юпитера в 2.5 раза превышает массу всех остальных планет вместе взятых.</p>
+            <p>Планета знаменита <a href="{{ url_for('glossary') }}#great-red-spot">Большим красным пятном</a> — гигантским штормом, бушующим уже более 400 лет. Юпитер действует как «космический щит» Земли, притягивая кометы и астероиды своей огромной гравитацией.</p>
+        </div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.0s">
+                    <span class="stat-number" data-count="139820" data-suffix=" км">0</span>
+                    <span class="stat-label">Диаметр</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.1s">
+                    <span class="stat-number" data-count="95" data-suffix=" шт">0</span>
+                    <span class="stat-label">Спутники</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.2s">
+                    <span class="stat-number" data-count="10" data-suffix=" ч">0</span>
+                    <span class="stat-label">День</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.3s">
+                    <span class="stat-number" data-count="600" data-suffix=" км/ч">0</span>
+                    <span class="stat-label">Ветер</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 reveal-left">
+                <div class="cosmic-card p-4 h-100">
+                    <h5 style="color:var(--blue);">📊 Физические данные</h5>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between mb-1"><span style="color:#8a9ab8;">Масса</span><span style="color:#c0d0e8;">1.9 × 10²⁷ кг</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="100%"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Сила тяжести</span><span style="color:#c0d0e8;">24.79 м/с²</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="78%"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Расстояние от Солнца</span><span style="color:#c0d0e8;">778 млн. км</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="72%"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 reveal-right">
+                <div class="cosmic-card p-4 h-100">
+                    <h5 style="color:var(--blue);">🌪️ Атмосфера</h5>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between mb-1"><span style="color:#8a9ab8;">Водород</span><span style="color:#ffd43b;">89%</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="89%" style="background:linear-gradient(90deg,#ffd43b,#ff9800);"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Гелий</span><span style="color:#74c0fc;">10%</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="10%" style="background:linear-gradient(90deg,#4dabf7,#339af0);"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Прочее</span><span style="color:#8ce99a;">1%</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="1%" style="background:linear-gradient(90deg,#69db7c,#40c057);"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cosmic-card p-4 reveal">
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                <button class="btn btn-warning btn-glow" data-bs-toggle="modal" data-bs-target="#jupiterModal">🌌 Интересные факты</button>
+                <a href="{{ url_for('glossary') }}#great-red-spot" class="btn btn-outline-light btn-glow">🌀 Красное пятно</a>
+                <a href="{{ url_for('glossary') }}#gas-giant" class="btn btn-outline-light btn-glow">🪐 Газовый гигант</a>
+            </div>
+            <h6 style="color:var(--blue);">🔗 Источники</h6>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+                <a href="https://www.nasa.gov/jupiter" target="_blank" class="tech-badge">NASA Jupiter</a>
+                <a href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank" class="tech-badge">Solar System</a>
+                <a href="https://ru.wikipedia.org/wiki/Юпитер" target="_blank" class="tech-badge">Wikipedia</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="cosmic-card p-3 mb-4 reveal-right">
+            <img src="{{ url_for('static', filename='images/jupiter.jpg') }}" class="planet-img" alt="Юпитер">
+            <p class="text-center mt-2" style="font-size:0.8rem; color:#4a6080;">Юпитер — снимок телескопа Хаббл</p>
+        </div>
+        <div class="cosmic-card p-3 mb-4 reveal-right" style="transition-delay:0.15s">
+            <img src="{{ url_for('static', filename='images/jupiter2.jpg') }}" class="planet-img" alt="Юпитер крупно">
+            <p class="text-center mt-2" style="font-size:0.8rem; color:#4a6080;">Большое красное пятно</p>
+        </div>
+        <div class="cosmic-card p-4 reveal-right" style="transition-delay:0.25s">
+            <h6 style="color:#8a9ab8; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase;">Другие планеты</h6>
+            <a href="{{ url_for('mars') }}" class="btn btn-outline-danger w-100 btn-glow mt-3">🔴 Марс →</a>
+            <a href="{{ url_for('saturn') }}" class="btn btn-outline-success w-100 btn-glow mt-2">🪐 Сатурн →</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="jupiterModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content cosmic-card">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" style="color:#ffd43b;">🌌 Удивительные факты о Юпитере</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">🛡️ Щит Земли</h6><p>Юпитер своей гравитацией притягивает кометы и астероиды, защищая внутренние планеты. Без него жизнь на Земле была бы под угрозой.</p></div></div>
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">🌀 400 лет шторма</h6><p>Большое красное пятно — антициклон размером больше Земли, бушующий непрерывно с 1830 года, а возможно и значительно дольше.</p></div></div>
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">💫 Почти звезда</h6><p>Если бы Юпитер был в 80 раз массивнее, в его недрах начались бы термоядерные реакции и он стал бы звездой.</p></div></div>
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">🌠 Ганимед</h6><p>Спутник Юпитера Ганимед — крупнейший спутник в Солнечной системе, больше планеты Меркурий и имеет собственное магнитное поле.</p></div></div>
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO -->
+<section class="hero-section reveal">
+    <p class="hero-subtitle mb-2" style="color:var(--blue); font-size:0.9rem; letter-spacing:2px; text-transform:uppercase;">Добро пожаловать во вселенную</p>
+    <h1 class="hero-title">
+        <span id="typewriter-text" data-text="Исследуй планеты Солнечной системы"></span><span class="typewriter-cursor"></span>
+    </h1>
+    <p class="hero-subtitle">Погрузись в удивительный мир космоса — узнай о Марсе, Юпитере и Сатурне</p>
+    <a href="{{ url_for('mars') }}" class="btn btn-primary btn-glow px-4 py-2 me-2">Начать исследование</a>
+    <a href="{{ url_for('glossary') }}" class="btn btn-outline-secondary px-4 py-2">Глоссарий</a>
+</section>
+
+<!-- CAROUSEL -->
+<div class="carousel-wrapper reveal mt-5">
+    <div id="planetCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#planetCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#planetCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#planetCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/mars.jpg') }}" class="d-block w-100 carousel-image" alt="Марс">
+                <div class="carousel-caption">
+                    <h3>🔴 Марс — Красная планета</h3>
+                    <p>Четвёртая планета от Солнца с загадочной красной поверхностью</p>
+                    <a href="{{ url_for('mars') }}" class="btn btn-warning btn-sm btn-glow">Исследовать →</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/jupiter.jpg') }}" class="d-block w-100 carousel-image" alt="Юпитер">
+                <div class="carousel-caption">
+                    <h3>🟠 Юпитер — Газовый гигант</h3>
+                    <p>Крупнейшая планета Солнечной системы с Большим красным пятном</p>
+                    <a href="{{ url_for('jupiter') }}" class="btn btn-info btn-sm btn-glow">Исследовать →</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/saturn.jpg') }}" class="d-block w-100 carousel-image" alt="Сатурн">
+                <div class="carousel-caption">
+                    <h3>🪐 Сатурн — Властелин колец</h3>
+                    <p>Шестая планета с великолепной системой колец из льда</p>
+                    <a href="{{ url_for('saturn') }}" class="btn btn-success btn-sm btn-glow">Исследовать →</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#planetCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#planetCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!-- PLANET CARDS -->
+<h2 class="text-center mt-5 mb-4 reveal" style="font-weight:800; color:#e8f0ff;">Выбери планету для исследования</h2>
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="planet-card reveal" style="transition-delay:0s">
+            <div class="planet-card-inner cosmic-card p-4 text-center h-100">
+                <span class="planet-icon" style="color:#ff6b6b;">🔴</span>
+                <h3 class="fw-bold mb-2" style="color:#ff8f8f;">Марс</h3>
+                <p class="mb-3">Четвёртая планета от Солнца. Красная поверхность из-за оксида железа. Имеет два спутника: <a href="{{ url_for('glossary') }}#phobos">Фобос</a> и <a href="{{ url_for('glossary') }}#deimos">Деймос</a>.</p>
+                <div class="row g-2 mb-3">
+                    <div class="col-6">
+                        <div class="cosmic-card stat-card">
+                            <span class="stat-number" data-count="6779" data-suffix=" км">0</span>
+                            <span class="stat-label">Диаметр</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="cosmic-card stat-card">
+                            <span class="stat-number" data-count="687" data-suffix=" дней">0</span>
+                            <span class="stat-label">Год</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ url_for('mars') }}" class="btn btn-outline-danger w-100 btn-glow">Исследовать Марс →</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="planet-card reveal" style="transition-delay:0.15s">
+            <div class="planet-card-inner cosmic-card p-4 text-center h-100">
+                <span class="planet-icon" style="color:#ffa94d;">🟠</span>
+                <h3 class="fw-bold mb-2" style="color:#ffc078;">Юпитер</h3>
+                <p class="mb-3">Крупнейшая планета Солнечной системы. <a href="{{ url_for('glossary') }}#gas-giant">Газовый гигант</a> со знаменитым <a href="{{ url_for('glossary') }}#great-red-spot">Большим красным пятном</a>.</p>
+                <div class="row g-2 mb-3">
+                    <div class="col-6">
+                        <div class="cosmic-card stat-card">
+                            <span class="stat-number" data-count="139820" data-suffix=" км">0</span>
+                            <span class="stat-label">Диаметр</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="cosmic-card stat-card">
+                            <span class="stat-number" data-count="95" data-suffix=" шт">0</span>
+                            <span class="stat-label">Спутники</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ url_for('jupiter') }}" class="btn btn-outline-warning w-100 btn-glow">Исследовать Юпитер →</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="planet-card reveal" style="transition-delay:0.3s">
+            <div class="planet-card-inner cosmic-card p-4 text-center h-100">
+                <span class="planet-icon" style="color:#69db7c;">🪐</span>
+                <h3 class="fw-bold mb-2" style="color:#8ce99a;">Сатурн</h3>
+                <p class="mb-3">Шестая планета с легендарными кольцами из льда и камня. Имеет 146 спутников, включая <a href="{{ url_for('glossary') }}#titan">Титан</a>.</p>
+                <div class="row g-2 mb-3">
+                    <div class="col-6">
+                        <div class="cosmic-card stat-card">
+                            <span class="stat-number" data-count="116460" data-suffix=" км">0</span>
+                            <span class="stat-label">Диаметр</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="cosmic-card stat-card">
+                            <span class="stat-number" data-count="146" data-suffix=" шт">0</span>
+                            <span class="stat-label">Спутники</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ url_for('saturn') }}" class="btn btn-outline-success w-100 btn-glow">Исследовать Сатурн →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

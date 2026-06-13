@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header reveal-left">
+    <p style="color:var(--red); font-size:0.85rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Четвёртая планета от Солнца</p>
+    <h1 style="background:linear-gradient(90deg,#ff8f8f,#ff4444); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">🔴 Марс — Красная планета</h1>
+</div>
+
+<div class="row g-4">
+    <!-- LEFT -->
+    <div class="col-lg-8">
+
+        <!-- Описание -->
+        <div class="cosmic-card p-4 mb-4 reveal-left">
+            <p class="lead" style="color:#c0d0e8;">Марс — четвёртая планета от Солнца и седьмая по размерам в Солнечной системе. Планета земной группы с разреженной атмосферой и загадочной красной поверхностью.</p>
+            <p>Особенностями рельефа Марса являются ударные кратеры, вулканы, долины, пустыни и полярные ледниковые шапки. На Марсе находится <strong style="color:#ff8f8f;">Олимп</strong> — самый высокий вулкан в Солнечной системе (21 км) и <strong style="color:#ff8f8f;">Долина Маринер</strong> — самый большой каньон.</p>
+        </div>
+
+        <!-- Статы -->
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.0s">
+                    <span class="stat-number" data-count="6779" data-suffix=" км">0</span>
+                    <span class="stat-label">Диаметр</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.1s">
+                    <span class="stat-number" data-count="687" data-suffix=" дн.">0</span>
+                    <span class="stat-label">Год</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.2s">
+                    <span class="stat-number" data-count="2" data-suffix=" шт">0</span>
+                    <span class="stat-label">Спутники</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.3s">
+                    <span class="stat-number" data-count="95" data-suffix="%">0</span>
+                    <span class="stat-label">CO₂ в атм.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Характеристики -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 reveal-left">
+                <div class="cosmic-card p-4 h-100">
+                    <h5 style="color:var(--blue);">📊 Физические данные</h5>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between mb-1"><span style="color:#8a9ab8;">Масса</span><span style="color:#c0d0e8;">6.39 × 10²³ кг</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="15%"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Сила тяжести</span><span style="color:#c0d0e8;">3.72 м/с²</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="38%"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Расстояние от Солнца</span><span style="color:#c0d0e8;">228 млн. км</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="45%"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 reveal-right">
+                <div class="cosmic-card p-4 h-100">
+                    <h5 style="color:var(--blue);">🌡️ Атмосфера и климат</h5>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between mb-1"><span style="color:#8a9ab8;">Макс. температура</span><span style="color:#ff8f8f;">+35°C</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="55%" style="background:linear-gradient(90deg,#ff6b6b,#ff4444);"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Мин. температура</span><span style="color:#74c0fc;">−153°C</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="90%" style="background:linear-gradient(90deg,#4dabf7,#339af0);"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Давление атм.</span><span style="color:#c0d0e8;">&lt; 1% от Земли</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="3%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопка модала + ссылки -->
+        <div class="cosmic-card p-4 reveal">
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                <button class="btn btn-warning btn-glow" data-bs-toggle="modal" data-bs-target="#marsModal">🚀 Интересные факты</button>
+                <a href="{{ url_for('glossary') }}#phobos" class="btn btn-outline-light btn-glow">🌑 Фобос</a>
+                <a href="{{ url_for('glossary') }}#deimos" class="btn btn-outline-light btn-glow">🌑 Деймос</a>
+            </div>
+            <h6 style="color:var(--blue);">🔗 Источники</h6>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+                <a href="https://www.nasa.gov/topics/mars/index.html" target="_blank" class="tech-badge">NASA Mars</a>
+                <a href="https://mars.nasa.gov" target="_blank" class="tech-badge">mars.nasa.gov</a>
+                <a href="https://ru.wikipedia.org/wiki/Марс" target="_blank" class="tech-badge">Wikipedia</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col-lg-4">
+        <div class="cosmic-card p-3 mb-4 reveal-right">
+            <img src="{{ url_for('static', filename='images/mars.jpg') }}" class="planet-img" alt="Марс">
+            <p class="text-center mt-2" style="font-size:0.8rem; color:#4a6080;">Снимок Марса — миссия OSIRIS</p>
+        </div>
+        <div class="cosmic-card p-3 mb-4 reveal-right" style="transition-delay:0.15s">
+            <img src="{{ url_for('static', filename='images/mars2.jpg') }}" class="planet-img" alt="Долина Маринер">
+            <p class="text-center mt-2" style="font-size:0.8rem; color:#4a6080;">Долина Маринер</p>
+        </div>
+        <!-- Навигация -->
+        <div class="cosmic-card p-4 reveal-right" style="transition-delay:0.25s">
+            <h6 style="color:#8a9ab8; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase;">Другие планеты</h6>
+            <a href="{{ url_for('jupiter') }}" class="btn btn-outline-warning w-100 btn-glow mt-3">🟠 Юпитер →</a>
+            <a href="{{ url_for('saturn') }}" class="btn btn-outline-success w-100 btn-glow mt-2">🪐 Сатурн →</a>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="marsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content cosmic-card">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" style="color:#ff8f8f;">🚀 Интересные факты о Марсе</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">⛰️ Олимп</h6><p>Вулкан Олимп — самая высокая гора в Солнечной системе: 21 км над уровнем поверхности, что в 2.5 раза выше Эвереста.</p></div></div>
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">🌪️ Пыльные бури</h6><p>На Марсе бывают пыльные бури планетарного масштаба, покрывающие всю поверхность и длящиеся месяцами.</p></div></div>
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">💧 Вода на Марсе</h6><p>NASA подтвердило наличие жидкой воды под полярными льдами. Возможно, миллиарды лет назад на Марсе был настоящий океан.</p></div></div>
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">🤖 Марсоходы</h6><p>Сейчас на Марсе работает марсоход Perseverance, который ищет следы прошлой жизни и собирает образцы грунта.</p></div></div>
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

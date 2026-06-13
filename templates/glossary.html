@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header reveal">
+    <p style="color:var(--blue); font-size:0.85rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Справочник терминов</p>
+    <h1 style="background:linear-gradient(90deg,var(--blue),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">📚 Глоссарий космических терминов</h1>
+</div>
+
+<div class="row g-4">
+
+    <!-- Фобос -->
+    <div class="col-md-6">
+        <div class="cosmic-card p-4 h-100 glossary-term reveal" style="transition-delay:0.0s">
+            <h4 id="phobos" style="color:#ff8f8f;">🌑 Фобос</h4>
+            <p>Самый большой и ближайший к Марсу спутник. Имеет неправильную форму и постепенно приближается к планете. Через ~50 млн лет столкнётся с Марсом или распадётся, образовав кольцо.</p>
+            <div class="d-flex gap-3 mb-3">
+                <div class="text-center"><span class="stat-number" style="font-size:1.1rem;" data-count="22" data-suffix=" км">0</span><br><span class="stat-label">Диаметр</span></div>
+                <div class="text-center"><span class="stat-number" style="font-size:1.1rem;" data-count="8" data-suffix=" ч">0</span><br><span class="stat-label">Орбита</span></div>
+            </div>
+            <img src="{{ url_for('static', filename='images/фобос.jpg') }}" class="planet-img w-100" style="max-height:180px; object-fit:cover;" alt="Фобос">
+            <div class="mt-3">
+                <a href="{{ url_for('mars') }}" class="btn btn-outline-danger btn-sm btn-glow">🔴 К описанию Марса</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Деймос -->
+    <div class="col-md-6">
+        <div class="cosmic-card p-4 h-100 glossary-term reveal" style="transition-delay:0.1s">
+            <h4 id="deimos" style="color:#ff8f8f;">🌑 Деймос</h4>
+            <p>Второй, меньший и более удалённый спутник Марса. Его поверхность значительно более гладкая — покрыта толстым слоем реголита. Медленно удаляется от Марса.</p>
+            <div class="d-flex gap-3 mb-3">
+                <div class="text-center"><span class="stat-number" style="font-size:1.1rem;" data-count="12" data-suffix=" км">0</span><br><span class="stat-label">Диаметр</span></div>
+                <div class="text-center"><span class="stat-number" style="font-size:1.1rem;" data-count="30" data-suffix=" ч">0</span><br><span class="stat-label">Орбита</span></div>
+            </div>
+            <img src="{{ url_for('static', filename='images/деймос.jpg') }}" class="planet-img w-100" style="max-height:180px; object-fit:cover;" alt="Деймос">
+            <div class="mt-3">
+                <a href="{{ url_for('mars') }}" class="btn btn-outline-danger btn-sm btn-glow">🔴 К описанию Марса</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Газовый гигант -->
+    <div class="col-md-6">
+        <div class="cosmic-card p-4 h-100 glossary-term reveal" style="transition-delay:0.2s">
+            <h4 id="gas-giant" style="color:#74c0fc;">🪐 Газовый гигант</h4>
+            <p>Крупная планета без твёрдой поверхности, состоящая преимущественно из водорода и гелия. В Солнечной системе к газовым гигантам относятся Юпитер и Сатурн, а к ледяным — Уран и Нептун.</p>
+            <div class="row g-2 mt-2">
+                <div class="col-6">
+                    <div class="cosmic-card p-2 text-center" style="background:rgba(77,171,247,0.05);">
+                        <span style="color:#ffd43b;">🟠</span>
+                        <a href="{{ url_for('jupiter') }}" style="color:#ffc078; text-decoration:none; display:block; font-size:0.9rem; margin-top:4px;">Юпитер</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="cosmic-card p-2 text-center" style="background:rgba(77,171,247,0.05);">
+                        <span style="color:#8ce99a;">🪐</span>
+                        <a href="{{ url_for('saturn') }}" style="color:#8ce99a; text-decoration:none; display:block; font-size:0.9rem; margin-top:4px;">Сатурн</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Большое красное пятно -->
+    <div class="col-md-6">
+        <div class="cosmic-card p-4 h-100 glossary-term reveal" style="transition-delay:0.3s">
+            <h4 id="great-red-spot" style="color:#74c0fc;">🌀 Большое красное пятно</h4>
+            <p>Гигантский антициклонический шторм в атмосфере Юпитера. Наблюдается непрерывно с 1830 года — возможно, значительно дольше. Размер пятна превышает диаметр Земли.</p>
+            <div class="d-flex gap-3 mb-3">
+                <div class="text-center"><span class="stat-number" style="font-size:1.1rem;" data-count="400" data-suffix="+ лет">0</span><br><span class="stat-label">Продолжительность</span></div>
+                <div class="text-center"><span class="stat-number" style="font-size:1.1rem;" data-count="16000" data-suffix=" км">0</span><br><span class="stat-label">Ширина</span></div>
+            </div>
+            <img src="{{ url_for('static', filename='images/Красное пятно.jpg') }}" class="planet-img w-100" style="max-height:160px; object-fit:cover;" alt="Большое красное пятно">
+            <div class="mt-3">
+                <a href="{{ url_for('jupiter') }}" class="btn btn-outline-warning btn-sm btn-glow">🟠 К описанию Юпитера</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Титан -->
+    <div class="col-12">
+        <div class="cosmic-card p-4 glossary-term reveal" style="transition-delay:0.4s">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h4 id="titan" style="color:#8ce99a;">🌕 Титан</h4>
+                    <p>Крупнейший спутник Сатурна и второй по величине спутник в Солнечной системе. Единственное небесное тело, кроме Земли, где доказано существование жидкости на поверхности — моря и озёра из жидкого метана при −179°C.</p>
+                    <p>Титан имеет плотную атмосферу из азота и метана, аналогичную ранней атмосфере Земли. Считается одним из наиболее перспективных мест для поиска жизни в Солнечной системе.</p>
+                    <div class="d-flex gap-4 mt-3">
+                        <div><span class="stat-number" style="font-size:1.2rem;" data-count="5150" data-suffix=" км">0</span><br><span class="stat-label">Диаметр</span></div>
+                        <div><span class="stat-number" style="font-size:1.2rem;" data-count="16" data-suffix=" дней">0</span><br><span class="stat-label">Орбита</span></div>
+                        <div><span class="stat-number" style="font-size:1.2rem;" data-count="179" data-suffix="°C">−</span><br><span class="stat-label">Температура</span></div>
+                    </div>
+                    <div class="mt-3">
+                        <a href="{{ url_for('saturn') }}" class="btn btn-outline-success btn-glow">🪐 К описанию Сатурна</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3 mt-md-0 text-center">
+                    <span style="font-size:8rem; filter:drop-shadow(0 0 30px #8ce99a); line-height:1;">🌕</span>
+                    <p style="color:#4a6080; font-size:0.8rem; margin-top:8px;">Спутник Сатурна — Титан</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

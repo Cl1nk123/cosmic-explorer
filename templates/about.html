@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header reveal">
+    <p style="color:var(--purple); font-size:0.85rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Разработчик проекта</p>
+    <h1 style="background:linear-gradient(90deg,var(--purple),var(--blue)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">👨‍🚀 Об авторе</h1>
+</div>
+
+<div class="row g-4">
+
+    <!-- Левая колонка — инфо -->
+    <div class="col-lg-7">
+        <div class="cosmic-card p-4 mb-4 reveal-left">
+            <div class="d-flex align-items-center gap-4 mb-4">
+                <div style="font-size:5rem; line-height:1; filter:drop-shadow(0 0 20px var(--purple));">👨‍💻</div>
+                <div>
+                    <h3 style="color:#e8f0ff; margin-bottom:4px;">Горбунов Даниил</h3>
+                    <p style="color:var(--purple); margin:0; font-size:0.9rem; letter-spacing:1px;">Full-stack разработчик · ИРНИТУ</p>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-6">
+                    <div style="padding:12px; background:rgba(77,171,247,0.06); border-radius:10px; border:1px solid var(--border);">
+                        <span style="color:#6b82a0; font-size:0.75rem; text-transform:uppercase; letter-spacing:1px;">Университет</span>
+                        <p style="color:#c0d0e8; margin:4px 0 0; font-weight:600;">ИРНИТУ</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div style="padding:12px; background:rgba(77,171,247,0.06); border-radius:10px; border:1px solid var(--border);">
+                        <span style="color:#6b82a0; font-size:0.75rem; text-transform:uppercase; letter-spacing:1px;">Курс</span>
+                        <p style="color:#c0d0e8; margin:4px 0 0; font-weight:600;">1 курс</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div style="padding:12px; background:rgba(77,171,247,0.06); border-radius:10px; border:1px solid var(--border);">
+                        <span style="color:#6b82a0; font-size:0.75rem; text-transform:uppercase; letter-spacing:1px;">Специальность</span>
+                        <p style="color:#c0d0e8; margin:4px 0 0; font-weight:600;">Информационные системы и технологии в административном управлении</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- О проекте -->
+        <div class="cosmic-card p-4 mb-4 reveal-left" style="transition-delay:0.1s">
+            <h5 style="color:var(--blue); margin-bottom:1rem;">🚀 О проекте</h5>
+            <p>Этот сайт — курсовой проект по дисциплине <strong style="color:#c0d0e8;">«Введение в веб-технологии»</strong>. Цель — создание современного многостраничного веб-ресурса о планетах Солнечной системы с использованием Flask и современных фронтенд-технологий.</p>
+            <p style="margin:0;">Сайт развёрнут на платформе <a href="https://clink.pythonanywhere.com" target="_blank">PythonAnywhere</a> и доступен онлайн.</p>
+        </div>
+
+        <!-- Контакты -->
+        <div class="cosmic-card p-4 reveal-left" style="transition-delay:0.2s">
+            <h5 style="color:var(--blue); margin-bottom:1rem;">📬 Контакты</h5>
+            <div class="d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3">
+                    <span style="font-size:1.5rem;">📧</span>
+                    <div>
+                        <span style="color:#6b82a0; font-size:0.8rem;">Email</span>
+                        <p style="color:#c0d0e8; margin:0; font-weight:500;">gordaniv22@gmail.com</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <span style="font-size:1.5rem;">✈️</span>
+                    <div>
+                        <span style="color:#6b82a0; font-size:0.8rem;">Telegram</span>
+                        <p style="color:#c0d0e8; margin:0; font-weight:500;">@cl1nk1</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <span style="font-size:1.5rem;">🌐</span>
+                    <div>
+                        <span style="color:#6b82a0; font-size:0.8rem;">Сайт</span>
+                        <a href="https://clink.pythonanywhere.com" target="_blank" style="color:var(--blue); font-weight:500; display:block;">clink.pythonanywhere.com</a>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-glow mt-4 w-100" data-bs-toggle="modal" data-bs-target="#contactModal">
+                📞 Написать автору
+            </button>
+        </div>
+    </div>
+
+    <!-- Правая колонка — технологии -->
+    <div class="col-lg-5">
+        <div class="cosmic-card p-4 mb-4 reveal-right">
+            <h5 style="color:var(--blue); margin-bottom:1rem;">🛠️ Технологии</h5>
+
+            <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1"><span style="color:#c0d0e8;">Python / Flask</span><span style="color:var(--blue);">Backend</span></div>
+                <div class="fact-progress"><div class="fact-progress-bar" data-width="90%"></div></div>
+            </div>
+            <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1"><span style="color:#c0d0e8;">HTML5 / Jinja2</span><span style="color:#ffd43b;">Шаблоны</span></div>
+                <div class="fact-progress"><div class="fact-progress-bar" data-width="85%" style="background:linear-gradient(90deg,#ffd43b,#ff9800);"></div></div>
+            </div>
+            <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1"><span style="color:#c0d0e8;">CSS3 / Анимации</span><span style="color:#ff8f8f;">Стили</span></div>
+                <div class="fact-progress"><div class="fact-progress-bar" data-width="80%" style="background:linear-gradient(90deg,#ff6b6b,#ff4444);"></div></div>
+            </div>
+            <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1"><span style="color:#c0d0e8;">JavaScript</span><span style="color:#8ce99a;">Интерактив</span></div>
+                <div class="fact-progress"><div class="fact-progress-bar" data-width="75%" style="background:linear-gradient(90deg,#69db7c,#40c057);"></div></div>
+            </div>
+            <div class="mb-0">
+                <div class="d-flex justify-content-between mb-1"><span style="color:#c0d0e8;">Bootstrap 5</span><span style="color:var(--purple);">UI-фреймворк</span></div>
+                <div class="fact-progress"><div class="fact-progress-bar" data-width="88%" style="background:linear-gradient(90deg,#9775fa,#7950f2);"></div></div>
+            </div>
+        </div>
+
+        <div class="cosmic-card p-4 mb-4 reveal-right" style="transition-delay:0.1s">
+            <h5 style="color:var(--blue); margin-bottom:1rem;">✨ Особенности</h5>
+            <div class="d-flex flex-column gap-2">
+                <div class="d-flex align-items-center gap-2"><span style="color:var(--blue);">✓</span><span style="color:#a0b4cc;">Анимированное звёздное небо (Canvas API)</span></div>
+                <div class="d-flex align-items-center gap-2"><span style="color:var(--blue);">✓</span><span style="color:#a0b4cc;">3D-эффекты карточек планет</span></div>
+                <div class="d-flex align-items-center gap-2"><span style="color:var(--blue);">✓</span><span style="color:#a0b4cc;">Анимация появления при скролле</span></div>
+                <div class="d-flex align-items-center gap-2"><span style="color:var(--blue);">✓</span><span style="color:#a0b4cc;">Счётчики характеристик планет</span></div>
+                <div class="d-flex align-items-center gap-2"><span style="color:var(--blue);">✓</span><span style="color:#a0b4cc;">Эффект печатающегося текста</span></div>
+                <div class="d-flex align-items-center gap-2"><span style="color:var(--blue);">✓</span><span style="color:#a0b4cc;">Кастомный курсор с анимацией</span></div>
+                <div class="d-flex align-items-center gap-2"><span style="color:var(--blue);">✓</span><span style="color:#a0b4cc;">Падающие звёзды на фоне</span></div>
+                <div class="d-flex align-items-center gap-2"><span style="color:var(--blue);">✓</span><span style="color:#a0b4cc;">Адаптивный дизайн (мобильный)</span></div>
+            </div>
+        </div>
+
+        <div class="cosmic-card p-4 reveal-right" style="transition-delay:0.2s">
+            <h5 style="color:var(--blue); margin-bottom:1rem;">🗂️ Страницы сайта</h5>
+            <div class="d-flex flex-column gap-2">
+                <a href="{{ url_for('index') }}" class="btn btn-outline-secondary btn-glow text-start">🏠 Главная</a>
+                <a href="{{ url_for('mars') }}" class="btn btn-outline-danger btn-glow text-start">🔴 Марс</a>
+                <a href="{{ url_for('jupiter') }}" class="btn btn-outline-warning btn-glow text-start">🟠 Юпитер</a>
+                <a href="{{ url_for('saturn') }}" class="btn btn-outline-success btn-glow text-start">🪐 Сатурн</a>
+                <a href="{{ url_for('glossary') }}" class="btn btn-outline-info btn-glow text-start">📚 Глоссарий</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content cosmic-card">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" style="color:var(--blue);">📞 Связаться с автором</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-column gap-3">
+                    <div class="cosmic-card p-3 d-flex align-items-center gap-3">
+                        <span style="font-size:2rem;">📧</span>
+                        <div><span style="color:#6b82a0; font-size:0.8rem;">Email</span><p style="color:#c0d0e8; margin:0; font-weight:600;">gordaniv22@gmail.com</p></div>
+                    </div>
+                    <div class="cosmic-card p-3 d-flex align-items-center gap-3">
+                        <span style="font-size:2rem;">✈️</span>
+                        <div><span style="color:#6b82a0; font-size:0.8rem;">Telegram</span><p style="color:#c0d0e8; margin:0; font-weight:600;">@cl1nk1</p></div>
+                    </div>
+                    <div class="cosmic-card p-3 d-flex align-items-center gap-3">
+                        <span style="font-size:2rem;">🎓</span>
+                        <div><span style="color:#6b82a0; font-size:0.8rem;">Университет</span><p style="color:#c0d0e8; margin:0; font-weight:600;">ИРНИТУ, 1 курс</p></div>
+                    </div>
+                </div>
+                <p class="text-center mt-3" style="color:#4a6080; font-size:0.85rem;">Всегда открыт для обратной связи и новых идей! 🚀</p>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header reveal-left">
+    <p style="color:#69db7c; font-size:0.85rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Шестая планета от Солнца</p>
+    <h1 style="background:linear-gradient(90deg,#8ce99a,#2f9e44); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">🪐 Сатурн — Властелин колец</h1>
+</div>
+
+<div class="row g-4">
+    <div class="col-lg-8">
+
+        <div class="cosmic-card p-4 mb-4 reveal-left">
+            <p class="lead" style="color:#c0d0e8;">Сатурн — шестая планета от Солнца и вторая по размерам в Солнечной системе. <a href="{{ url_for('glossary') }}#gas-giant">Газовый гигант</a> с легендарной системой колец, видимых даже в небольшой телескоп.</p>
+            <p>Кольца Сатурна простираются на <strong style="color:#8ce99a;">282 000 км</strong> в ширину, однако их толщина составляет всего около 10 метров. Они состоят преимущественно из водяного льда и скальных обломков.</p>
+        </div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.0s">
+                    <span class="stat-number" data-count="116460" data-suffix=" км">0</span>
+                    <span class="stat-label">Диаметр</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.1s">
+                    <span class="stat-number" data-count="146" data-suffix=" шт">0</span>
+                    <span class="stat-label">Спутники</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.2s">
+                    <span class="stat-number" data-count="7" data-suffix=" шт">0</span>
+                    <span class="stat-label">Колец</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="cosmic-card stat-card reveal" style="transition-delay:0.3s">
+                    <span class="stat-number" data-count="29" data-suffix=" лет" data-decimals="0">0</span>
+                    <span class="stat-label">Год</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 reveal-left">
+                <div class="cosmic-card p-4 h-100">
+                    <h5 style="color:var(--blue);">📊 Физические данные</h5>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between mb-1"><span style="color:#8a9ab8;">Масса</span><span style="color:#c0d0e8;">5.68 × 10²⁶ кг</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="85%"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Сила тяжести</span><span style="color:#c0d0e8;">10.44 м/с²</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="42%"></div></div>
+                        <div class="d-flex justify-content-between mt-3 mb-1"><span style="color:#8a9ab8;">Расстояние от Солнца</span><span style="color:#c0d0e8;">1.43 млрд. км</span></div>
+                        <div class="fact-progress"><div class="fact-progress-bar" data-width="88%"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 reveal-right">
+                <div class="cosmic-card p-4 h-100">
+                    <h5 style="color:var(--blue);">🪐 Уникальные факты</h5>
+                    <div class="mt-2">
+                        <div class="d-flex align-items-start gap-2 mb-3">
+                            <span style="color:#8ce99a; font-size:1.2rem;">💧</span>
+                            <p class="mb-0">Сатурн — <strong style="color:#8ce99a;">наименее плотная</strong> планета. Его плотность меньше воды — он бы плавал в море!</p>
+                        </div>
+                        <div class="d-flex align-items-start gap-2 mb-3">
+                            <span style="color:#8ce99a; font-size:1.2rem;">⬡</span>
+                            <p class="mb-0">На Северном полюсе бушует <strong style="color:#8ce99a;">шестиугольный шторм</strong> — каждая сторона больше диаметра Земли.</p>
+                        </div>
+                        <div class="d-flex align-items-start gap-2">
+                            <span style="color:#8ce99a; font-size:1.2rem;">👁️</span>
+                            <p class="mb-0">Каждые 15 лет кольца поворачиваются к Земле ребром и почти <strong style="color:#8ce99a;">исчезают</strong> из вида.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cosmic-card p-4 reveal">
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                <button class="btn btn-success btn-glow" data-bs-toggle="modal" data-bs-target="#saturnModal">🌟 Интересные факты</button>
+                <a href="{{ url_for('glossary') }}#titan" class="btn btn-outline-light btn-glow">🌑 Титан</a>
+                <a href="{{ url_for('glossary') }}#gas-giant" class="btn btn-outline-light btn-glow">🪐 Газовый гигант</a>
+            </div>
+            <h6 style="color:var(--blue);">🔗 Источники</h6>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+                <a href="https://www.nasa.gov/saturn" target="_blank" class="tech-badge">NASA Saturn</a>
+                <a href="https://solarsystem.nasa.gov/planets/saturn/overview/" target="_blank" class="tech-badge">Solar System</a>
+                <a href="https://ru.wikipedia.org/wiki/Сатурн" target="_blank" class="tech-badge">Wikipedia</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="cosmic-card p-3 mb-4 reveal-right">
+            <img src="{{ url_for('static', filename='images/saturn.jpg') }}" class="planet-img" alt="Сатурн">
+            <p class="text-center mt-2" style="font-size:0.8rem; color:#4a6080;">Сатурн — миссия Cassini</p>
+        </div>
+        <div class="cosmic-card p-3 mb-4 reveal-right" style="transition-delay:0.15s">
+            <img src="{{ url_for('static', filename='images/saturn2.jpg') }}" class="planet-img" alt="Сатурн кольца">
+            <p class="text-center mt-2" style="font-size:0.8rem; color:#4a6080;">Кольца Сатурна</p>
+        </div>
+        <div class="cosmic-card p-4 reveal-right" style="transition-delay:0.25s">
+            <h6 style="color:#8a9ab8; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase;">Другие планеты</h6>
+            <a href="{{ url_for('mars') }}" class="btn btn-outline-danger w-100 btn-glow mt-3">🔴 Марс →</a>
+            <a href="{{ url_for('jupiter') }}" class="btn btn-outline-warning w-100 btn-glow mt-2">🟠 Юпитер →</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="saturnModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content cosmic-card">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" style="color:#8ce99a;">🌟 Удивительные факты о Сатурне</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">💧 Плавающая планета</h6><p>Средняя плотность Сатурна — 0.687 г/см³, что меньше плотности воды (1 г/см³). Если бы существовал достаточно большой океан, Сатурн бы в нём плавал.</p></div></div>
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">🌑 Титан</h6><p>Спутник Титан — единственное тело в Солнечной системе кроме Земли, где на поверхности есть жидкость: озёра и моря из жидкого метана.</p></div></div>
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">💍 Исчезающие кольца</h6><p>Кольца Сатурна постепенно осыпаются на планету. По расчётам NASA, через 100 миллионов лет они полностью исчезнут.</p></div></div>
+                    <div class="col-md-6"><div class="cosmic-card p-3"><h6 style="color:#ffd43b;">⬡ Шестиугольник</h6><p>Гексагональный шторм на Северном полюсе существует уже десятилетиями. Каждая сторона шестиугольника — около 14 500 км.</p></div></div>
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
